@@ -1,0 +1,9 @@
+module PQ1(a,s,h,l,e);
+input a,s,h,l;
+output e;
+wire z1,z2,z3;
+not(z1,a);
+and(z2,z1,s);
+and(z3,a,l);
+or(e,z2,z3,h);
+endmodule
