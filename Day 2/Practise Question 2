@@ -1,0 +1,31 @@
+//code for Output P
+module PQ2(a,b,c,d,p);
+input a,b,c,d;
+output p;
+wire z1,z2,z3z4,z5,z6,z7;
+not(z1,a);
+not(z2,b);
+not(z3,c);
+and(z4,b,z3,d);
+and(z5,z2,c,d);
+and(z6,z1,z2,c);
+and(z7,z1,b,d);
+or(p,z4,z5,z6,z7);
+endmodule
+
+//code for Output D
+module PQ2(a,b,c,d,dout);
+input a,b,c,d;
+output dout;
+wire z1,z2,z3,z4,z5,z6,z7,z8,z9;
+not(z1,a);
+not(z2,b);
+not(z3,c);
+not(z4,d);
+and(z5,a,b,z3,z4);
+and(z6,a,z2,z3,d);
+and(z7,z1,z2,c,d);
+and(z8,a,b,c,d);
+and(z9,z1,b,c,z4);
+or(dout,z5,z6,z7,z8,z9);
+endmodule
