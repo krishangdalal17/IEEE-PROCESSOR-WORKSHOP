@@ -1,0 +1,15 @@
+module PQ4(a,b,c,y1,y2,y3,y4,y5,y6);
+input a,b,c;
+output y1,y2,y3,y4,y5,y6;
+wire z1,z2,z3;
+and(y6,a,b,c);
+and(y5,b,c);
+and(z1,a,c);
+and(z2,b,c);
+and(z3,a,b);
+or(y4,z1,z2);
+or(y2,z3,c);
+or(y1,a,b);
+or(y0,a,b,c);
+assign y3=a;
+endmodule
